@@ -26,10 +26,13 @@ template <typename T> void MyList<T>::push_front(const T &value) {
 }
 
 template <typename T> void MyList<T>::pop_front() {
-  ListNode<T> *tmp = head->next;
-  delete head;
-  head = tmp;
-  num_elements--;
+
+  if (num_elements > 0) {
+    ListNode<T> *tmp = head->next;
+    delete head;
+    head = tmp;
+    num_elements--;
+  }
 }
 
 // Implement each of the functions below
@@ -38,7 +41,12 @@ template <typename T> void MyList<T>::pop_front() {
 
 template <typename T> MyList<T>::~MyList() {}
 
-template <typename T> MyList<T> &MyList<T>::operator=(const MyList<T> &rhs) {}
+template <typename T> MyList<T> &MyList<T>::operator=(const MyList<T> &rhs) {
+
+  // Finish Me!
+
+  return *this;
+}
 
 template <typename T> MyList<T>::MyList(const MyList<T> &rhs) {}
 
@@ -57,4 +65,3 @@ template <typename T> LinkedListIterator<T> MyList<T>::find(const T &value) {}
 
 template <typename T>
 void MyList<T>::splice_after(ListNode<T> *splice_point, MyList<T> &source) {}
-

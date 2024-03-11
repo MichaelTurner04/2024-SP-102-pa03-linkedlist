@@ -1,4 +1,4 @@
-/* 
+/*
  * If you want to know what the functions do,
  * Read the links in the assignment description from en.cppreference.
  */
@@ -21,11 +21,11 @@ public:
   // ListNode<T> *prev;
 
   /*
-	You may create a singly-linked forward list
-	(Similar to the implementation discussed in class)
-	Or you may attempt a doubly-linked list  
-	(Will require different code for most ops)
-	Uncomment the line above if you're up for the challenge
+        You may create a singly-linked forward list
+        (Similar to the implementation discussed in class)
+        Or you may attempt a doubly-linked list
+        (Will require different code for most ops)
+        Uncomment the line above if you're up for the challenge
   */
 };
 
