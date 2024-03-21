@@ -5,8 +5,7 @@
 
 #include "MyList.h"
 
-
-void HashFunction(const int& key);
+void HashFunction(const int &key);
 void ApplyHashFunction(MyList<int> keys);
 
 int main() {
