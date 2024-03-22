@@ -108,7 +108,12 @@ template <typename T> void MyList<T>::reverse() {
   ListNode<T> *prevNode = nullptr;
   ListNode<T> *currNode = head;
   ListNode<T> *nextNode = nullptr;
-  while (currNode != nullptr) {
+  ListNode<T> *tmp = head;
+  for (int i = 0; i < num_elements; i++) {
+    tmp = tmp->next;
+  }
+  delete tmp;
+  for (int i = 0; i < num_elements; i++) {
     nextNode = currNode->next;
     currNode->next = prevNode;
     prevNode = currNode;
