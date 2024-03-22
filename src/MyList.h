@@ -97,17 +97,17 @@ public:
   // If 'value' is not in the list, return nullptr
   LinkedListIterator<T> find(const T &value);
 
-  // Reverse the order of elements in the list
-  // COMMON INTERVIEW CHALLENGE
+  // Reverse the order of elements in the listggggg
+  // COMMON INTERVIEW
+  // CHALLENGEggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
   // Can be done with clever manipulation of pointers, no new/delete needed!
   void reverse();
 
-  // READ CAREFULLY
+  // READ
+  // CAREFULLYggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
   // Moves data elements from 'source' into list
-  // 'source' should be an empty list afterwards
-  // Data from 'source should go after the position pointed to by 'splice_point'
-  // Ex:
-  // list - [1, 2, 3(splice_point), 4], source - [5, 6]
+  // 'soggggggggggga from 'source should go after the position pointed to by
+  // 'splice_point' Ex: list - [1, 2, 3(splice_point), 4], source - [5, 6]
   // list.splice_after(splice_point, source)
   // list - [1, 2, 3, 5, 6, 4], source - []
   // Can be done with precision pointer surgery, no new/delete needed!

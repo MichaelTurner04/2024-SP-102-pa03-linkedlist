@@ -13,8 +13,7 @@ int main() {
 
   string line;
   while (std::cin >> line) {
-
-    // Finish Me!
+    cout << line;
   }
 
   return 0;

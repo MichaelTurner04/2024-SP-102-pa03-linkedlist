@@ -104,7 +104,18 @@ template <typename T> void MyList<T>::erase(LinkedListIterator<T> iter) {
   }
 }
 
-template <typename T> void MyList<T>::reverse() {}
+template <typename T> void MyList<T>::reverse() {
+  ListNode<T> *prevNode = nullptr;
+  ListNode<T> *currNode = head;
+  ListNode<T> *nextNode = nullptr;
+  while (currNode != nullptr) {
+    nextNode = currNode->next;
+    currNode->next = prevNode;
+    prevNode = currNode;
+    currNode = nextNode;
+  }
+  head = prevNode;
+}
 
 template <typename T> LinkedListIterator<T> MyList<T>::find(const T &value) {
   ListNode<T> *runner = head;
@@ -118,4 +129,14 @@ template <typename T> LinkedListIterator<T> MyList<T>::find(const T &value) {
 }
 
 template <typename T>
-void MyList<T>::splice_after(ListNode<T> *splice_point, MyList<T> &source) {}
+void MyList<T>::splice_after(ListNode<T> *splice_point, MyList<T> &source) {
+  ListNode<T> *lastNode = source.head;
+  while (lastNode->next != nullptr) {
+    lastNode = lastNode->next;
+  }
+  lastNode->next = splice_point->next;
+  splice_point->next = source.head->next;
+  num_elements += source.size();
+  source.head->next = nullptr;
+  source.num_elements = 0;
+}
